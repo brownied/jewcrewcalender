@@ -11,6 +11,10 @@
     text-align: center;
 }
 
+.home-container{
+    padding: 10px;
+}
+
 
 /* Next Event Banner*/
 .upcoming{
@@ -63,6 +67,7 @@
 body{
     min-height: 100vh;
     background: #ffffff;
+    
 }
 
 .calendar-container{
@@ -217,7 +222,7 @@ body{
 
 /* container */
 .login-container{
-    height: 400px;
+    height: 370px;
     width: 325px;
     box-shadow: 0 0 4px rgba(0, 0, 0, .3);
     border-radius: 10px;
@@ -229,6 +234,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    min-height: 100vh;
 }
 
 .log-sign-container{
@@ -283,4 +289,11 @@ body{
     margin-top: 5px;
     text-align: center;
     font-size: 14px;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
 }
