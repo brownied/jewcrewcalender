@@ -122,7 +122,7 @@ header{
 /* Next Event Banner*/
 .upcoming{
     width: auto;
-    height: 200px;
+    height: 220px;
     border: 2px solid var(--ink);
     border-radius: var(--radius);
     padding: 18px;
@@ -161,6 +161,7 @@ header{
     font-size: 16px;
     color: rgb(110, 110, 110);
     font-weight: 800px;
+    text-align: center;
 }
 
 .location{
