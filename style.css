@@ -4,38 +4,147 @@
     font-family: 'Poppins', sans-serif;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Karla:wght@400;500;600;700&display=swap');
+
+:root{
+  --ink:      #1c2740;
+  --ink-70:   #1c274070;
+  --cream:    #f7f1e3;
+  --paper:    #fffdf7;
+  --gold:     #c9962f;
+  --gold-dark:#a8791f;
+  --brick:    #b2503a;
+  --forest:   #3f5a48;
+  --line:     #1c274022;
+  --radius:   16px;
+  --shadow:   4px 4px 0 var(--ink);
+  --shadow-sm:3px 3px 0 var(--ink);
+  --shell-w:  480px;
+  --shell-half: 240px;
+  --nav-h:    68px;
+  --safe-b:   env(safe-area-inset-bottom, 0px);
+}
+
+html{ scroll-behavior: smooth; }
+
+body{
+  margin:0;
+  background: #10182b;
+  color: var(--ink);
+  font-family: 'Karla', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
 
 .bannerTitle{
-    padding-top: 10px;
-    margin-bottom: -3px;
+    font-size: 20px;
+    
+    text-align: left;
+    padding: 0;
+    margin-top: 15px;
+    display: inline;
+}
+
+.david{
+    
+    display: inline;
+}
+
+header{
+    display: flex;
+}
+
+
+
+.svg{
+    width: 30px;
+    height: 30px;
+    
+}
+
+.transitionSolid{
+    margin-top: -8px;
+    margin-bottom: 10px;
+    border-bottom: 3px solid black;
+}
+
+.header2{
+    color: var(--ink);
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 10px;
     text-align: center;
 }
+
+.subheader2{
+    color: rgba(28, 39, 64, 0.44);
+    text-align: center;
+    font-weight: 500;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+
 
 .home-container{
     padding: 10px;
 }
 
+.gold-transition{
+    
+    display: flex;
+    justify-content: center;
+}
+
+.contain-test{
+    display: flex;
+    justify-content: center;
+}
+.subheader3{
+    text-align: center;
+    border-bottom: 2px solid var(--gold);
+   margin-top: 20px;
+   margin-bottom: 10px;
+   width: 85%;
+   display: flex;
+   justify-content: center;
+   
+}
 
 /* Next Event Banner*/
 .upcoming{
     width: auto;
     height: 200px;
-    border: 2px solid rgb(0, 0, 0);
-    border-radius: 10px;
+    border: 2px solid var(--ink);
+    border-radius: var(--radius);
+    padding: 18px;
+    box-shadow: var(--shadow-sm);
     font-size: larger;
     display: flex;
-    
+    background: white;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 5px 5px var(--ink);
+
     
 }
+
+.transition{
+    margin-top: 30px;
+    margin-bottom: 10px;
+    border-bottom: 3px dashed black;
+}
+
+
+
 .next-event-title{
     display: flex;
     justify-content: center;
     font-weight: 800;
-    color: rgb(110, 110, 110);
+    color: var(--gold);
 }
 
 .meeting-name{
@@ -64,15 +173,35 @@
 /*calendar */
 
 
+.subheader{
+    color: var(--brick);
+    font-size: 1rem;
+    font-weight: 800;
+    margin-top: 30px;
+    
+}
+
+
+.header1{
+    color: var(--ink);
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
 body{
     min-height: 100vh;
-    background: #ffffff;
+    background:
+    radial-gradient(var(--ink-70) 0.6px, transparent 0.6px) 0 0/20px 20px,
+    var(--cream);
     
 }
 
 .calendar-container{
     display: flex;
     justify-content: center;
+    
+    
 }
 
 .calendar{
@@ -85,7 +214,7 @@ body{
     background: #fff;
     border: 2px solid black;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 5px 5px var(--ink);
 }
 
 
@@ -103,19 +232,20 @@ body{
     justify-content: space-between;
     align-items: center;
     padding: 10px;
+    
 }
 
 .header button {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: none;
+    border: 1px solid var(--ink);
     border-radius: 50%;
     background: #ffffff;
     cursor: pointer;
     width: 40px;
     height: 40px;
-    box-shadow: 0 0 4px rgba(0, 0, 0, .2);
+    box-shadow: 3px 3px var(--ink);
 }
 
 .days{
@@ -152,12 +282,12 @@ body{
 }
 
 .date:hover {
-    background: #ff5869;
+    background: var(--gold);
     color: #fff;
 }
 
 .date.active{
-    border: 3px solid #ff5869;
+    border: 3px solid var(--gold);
 }
 
 .date.inactive{
@@ -172,13 +302,14 @@ body{
 
 .rsvp{
     border: 2px solid black;
-    height: 200px;
+    background: white;
+    height: 215px;
     margin-top: 10px;
     border-radius: 10px;
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
 
@@ -192,7 +323,7 @@ body{
     width: 100px;
     font-size: x-large;
     color: white;
-    
+    margin-bottom: 5px;
 }
 
 
@@ -205,7 +336,7 @@ body{
     bottom: 0;
     width: 100%;
     height: 30px;
-    background-color: #e1e0e0;
+    background-color: #ffffff;
     color: white;
     text-align: center;
     display: flex;
@@ -220,14 +351,15 @@ body{
     cursor: pointer;
 }
 
-/* container */
+/* login container */
 .login-container{
     height: 370px;
     width: 325px;
-    box-shadow: 0 0 4px rgba(0, 0, 0, .3);
+    box-shadow: 5px 5px var(--ink);
     border-radius: 10px;
     display: flex;
     flex-direction: column;
+    background: white;
 }
 
 .account-body{
@@ -235,6 +367,7 @@ body{
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+    
 }
 
 .log-sign-container{
@@ -259,13 +392,16 @@ body{
 }
 
 .loginbtn{
-    background: linear-gradient(to bottom right, blue, white);
+    border: 2px solid var(--gold);
+    
+    
 }
 
 .form{
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 
 .form input{
@@ -278,7 +414,7 @@ body{
 .submit-button{
     border: none;
     border-radius: 5px;
-    background: linear-gradient(to bottom right, blue, white);
+    background: var(--gold);
     width: 300px;
     padding-bottom: 3px;
     padding-top: 3px;
@@ -296,4 +432,10 @@ html, body {
     padding: 0;
     width: 100%;
     min-height: 100%;
+}
+
+.bannerTitleLogin{
+    font-weight: bolder;
+    font-size: 32px;
+    text-align: center;
 }
