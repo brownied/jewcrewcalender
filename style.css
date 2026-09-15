@@ -40,8 +40,8 @@ body{
     font-size: 20px;
     
     text-align: left;
-    padding: 0;
-    margin-top: 15px;
+    padding-left: 5px;
+    margin-top: 5px;
     display: inline;
 }
 
@@ -52,8 +52,14 @@ body{
 
 header{
     display: flex;
+    justify-content: space-between;
 }
 
+.left-header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 
 .svg{
@@ -215,6 +221,7 @@ body{
     border: 2px solid black;
     border-radius: 10px;
     box-shadow: 5px 5px var(--ink);
+    
 }
 
 
@@ -328,20 +335,20 @@ body{
 
 
 
+
+
 /* footer */
 
 .footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 30px;
-    background-color: #ffffff;
-    color: white;
-    text-align: center;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+
+
+.footer div{
+    padding: 0px 10px 0px 10px;
 }
 .home{
     cursor: pointer;
@@ -360,6 +367,7 @@ body{
     display: flex;
     flex-direction: column;
     background: white;
+    margin-top: -120px;
 }
 
 .account-body{
@@ -428,14 +436,21 @@ body{
 }
 
 html, body {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     width: 100%;
     min-height: 100%;
+    max-width: 95%;
+   
 }
 
 .bannerTitleLogin{
     font-weight: bolder;
     font-size: 32px;
     text-align: center;
+}
+
+.space{
+    height: 100px;
+
 }
