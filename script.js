@@ -1,28 +1,28 @@
 const events = [
     {
-        date: "2026-09-21",
+        date: "2026-09-22",
         name: "Yom Kippur",
         time: "All lunch periods",
         location: "New Commons",
-        description: "Come learn about why we celebrate yom kippur!"
+        description: "Come learn about what Yom Kippur is!"
 
     },
 
     {
         date: "2026-09-13",
-        name: "Yom Kippur",
+        name: "Rosh Hashanah",
         time: "All lunch periods",
-        location: "New Commons",
-        description: "Come learn about why we celebrate yom kippur!"
+        location: "Skyloft",
+        description: "Have some apples and honey while learning about Rosh Hashanah!"
 
     },
 
     {
         date: "2026-10-13",
-        name: "Yom Kippur",
-        time: "All lunch periods",
-        location: "New Commons",
-        description: "Come learn about why we celebrate yom kippur!"
+        name: "Sukkah Building",
+        time: "After School",
+        location: "Lunch Court",
+        description: "Help build the sukkah and eat delicious food after!"
 
     }
 ]
