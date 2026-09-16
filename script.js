@@ -1,3 +1,41 @@
+const events = [
+    {
+        date: "2026-09-21",
+        name: "Yom Kippur",
+        time: "All lunch periods",
+        location: "New Commons",
+        description: "Come learn about why we celebrate yom kippur!"
+
+    },
+
+    {
+        date: "2026-09-13",
+        name: "Yom Kippur",
+        time: "All lunch periods",
+        location: "New Commons",
+        description: "Come learn about why we celebrate yom kippur!"
+
+    },
+
+    {
+        date: "2026-10-13",
+        name: "Yom Kippur",
+        time: "All lunch periods",
+        location: "New Commons",
+        description: "Come learn about why we celebrate yom kippur!"
+
+    }
+]
+
+
+
+const eventContainer = document.getElementById('event-container');
+eventContainer.style.display = "none";
+
+
+
+
+
 const monthYearElement = document.getElementById('monthYear');
 const datesYearElement = document.getElementById('dates');
 const prevBtn = document.getElementById('prevBtn');
@@ -29,8 +67,17 @@ const updateCalendar = () => {
     for (let i = 1; i <= totalDays; i++) {
         const date = new Date(currentYear, currentMonth, i);
         const activeClass = date.toDateString() === new Date().toDateString() ? 'active' : '';
-        datesHTML += `<div class= "date ${activeClass}">${i}</div>`;
+        const dateString = `${currentYear}-${String(currentMonth + 1).padStart(2, '0')}-${String(i).padStart(2, '0')}`;
 
+        let eventClass = "";
+        for (let j = 0; j < events.length; j++){
+            if (events[j].date == dateString){
+                eventClass = "fill";
+            }
+        }
+        
+        datesHTML += `<div class="date ${activeClass} ${eventClass}" data-date="${dateString}">${i}</div>`;
+        
     }
 
     for(let i = 1; i <= 7 - lastDayIndex; i++){
@@ -39,16 +86,48 @@ const updateCalendar = () => {
 
     }
 
-    datesYearElement.innerHTML = datesHTML; 
+    datesYearElement.innerHTML = datesHTML;
+
+    const dateElements = document.querySelectorAll(".date");
+
+    dateElements.forEach(dateElement => {
+
+        dateElement.addEventListener("click", () => {
+            document.getElementById('event-container').style.display = "block";
+            const clickedDate = dateElement.dataset.date;
+
+            const event = events.find(event => event.date === clickedDate);
+
+            if (event) {
+
+            document.getElementById("event-name").textContent = event.name;
+            document.getElementById("event-time").textContent = event.time;
+            document.getElementById("event-location").textContent = `📍 ${event.location}`;
+            document.getElementById("event-description").textContent = event.description;
+
+            } else {
+
+            document.getElementById("event-name").textContent = "No Event";
+            document.getElementById("event-time").textContent = "";
+            document.getElementById("event-location").textContent = "";
+            document.getElementById("event-description").textContent = "There is no Jew Crew event scheduled for this day.";
+
+            }
+
+        });
+
+    });
 
 } 
 
 prevBtn.addEventListener('click', () => {
+    eventContainer.style.display = "none";
     currentDate.setMonth(currentDate.getMonth() - 1);
     updateCalendar();
 })
 
 nextBtn.addEventListener('click', () => {
+    eventContainer.style.display = "none";
     currentDate.setMonth(currentDate.getMonth() + 1);
     updateCalendar();
 })

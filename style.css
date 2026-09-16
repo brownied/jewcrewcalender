@@ -155,6 +155,7 @@ header{
 
 .meeting-name{
     font-size: 32px;
+    text-align: center;
 }
 
 .date-and-time{
@@ -168,11 +169,13 @@ header{
     font-size: 16px;
     color: rgb(110, 110, 110);
     font-weight: 800px;
+    text-align: center;
 }
 
 .description{
     text-align: center;
     font-size: 18px;
+    text-align: center;
 }
 
 
@@ -213,7 +216,9 @@ body{
 
 .calendar{
     margin-top: 10px;
-    width: auto;
+    width: 100%;
+    max-width: 485px;
+    box-sizing: border-box;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -294,10 +299,16 @@ body{
     color: #fff;
 }
 
+.fill{
+    border: 2px dotted var(--gold);
+    border-radius: 50%;
+}
+
+/*
 .date.active{
     border: 3px solid var(--gold);
 }
-
+*/
 .date.inactive{
     color: #d2d2d2;
 }
@@ -454,4 +465,14 @@ html, body {
 .space{
     height: 100px;
 
+}
+
+.extension-container{
+    height: fit-content;
+    width: 100%;
+    box-sizing: border-box;
+    max-width: 500px;
+    border: 2px solid var(--gold);
+    border-radius: 5px;
+    margin-top: 5px;
 }
