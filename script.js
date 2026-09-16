@@ -9,7 +9,7 @@ const events = [
     },
 
     {
-        date: "2026-09-8",
+        date: "2026-09-08",
         name: "Rosh Hashanah",
         time: "All lunch periods",
         location: "Skyloft",
