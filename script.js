@@ -1,16 +1,16 @@
 const events = [
     {
-        date: "2026-09-22",
-        name: "Yom Kippur",
-        time: "All lunch periods",
-        location: "New Commons",
-        description: "Come learn about what Yom Kippur is!"
+        date: "2026-08-09",
+        name: "Welcome BBQ",
+        time: "6 p.m.",
+        location: "Posner House",
+        description: "Eat great food and meet other people before the school yeare!"
 
     },
 
     {
-        date: "2026-09-08",
-        name: "Rosh Hashanah",
+        date: "2026-09-01",
+        name: "Jew Crew Kick off meeting",
         time: "All lunch periods",
         location: "Skyloft",
         description: "Have some apples and honey while learning about Rosh Hashanah!"
@@ -18,13 +18,72 @@ const events = [
     },
 
     {
-        date: "2026-10-13",
-        name: "Sukkah Building",
+        date: "2026-09-22",
+        name: "Build the Sukkah!",
         time: "After School",
         location: "Lunch Court",
-        description: "Help build the sukkah and eat delicious food after!"
+        description: "Help build the sukkah in the outdoor space outside the cafeteria!"
 
+    },
+
+    {
+        date: "2026-09-29",
+        name: "Lunch in the Sukkah!",
+        time: "All Lunch Periods",
+        location: "Lunch Court",
+        description: "Eat great food in the Sukkah!"
+
+    },
+
+    {
+        date: "2026-10-13",
+        name: "Meeting!",
+        time: "All Lunch Periods",
+        location: "TBD",
+        description: "Learn about Judaism"
+    },
+
+    {
+        date: "2026-10-27",
+        name: "Food Sale! 🍇",
+        time: "All Lunch Periods",
+        location: "Concession Stand",
+        description: "Sign up to volunteer at the food stand or come by and buy some food and learn about Judaism!"
+    },
+
+    {
+        date: "2026-11-10",
+        name: "Meeting!",
+        time: "All Lunch Periods",
+        location: "TBD",
+        description: ""
+    },
+
+    {
+        date: "2026-11-20",
+        name: "Jew Crew Shabbat",
+        time: "TBD",
+        location: "TBD",
+        description: ""
+    },
+
+    {
+        date: "2026-12-01",
+        name: "Meeting!",
+        time: "All Lunch Periods",
+        location: "TBD",
+        description: ""
+    },
+
+    {
+        date: "2026-12-08",
+        name: "Food Sale!",
+        time: "All Lunch Periods",
+        location: "Concession Stand",
+        description: "Sign up to volunteer at the food stand or come by and buy some food and learn about Judaism!"
     }
+
+
 ]
 
 
